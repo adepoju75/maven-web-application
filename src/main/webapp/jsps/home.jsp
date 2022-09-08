@@ -9,7 +9,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to landmarks..</h1>
+<h1 align="center">Welcome to landmark..</h1>
 <h1 align="center">We are developing and supporting quality  software Solutions to millions of clients.
 	We offer  Training for DevOps with Linux and Cloud equipping IT Engineers for best performance.</h1>
 <hr>
