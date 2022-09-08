@@ -97,7 +97,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://52.204.124.229:8081/repository/maven-snapshots/</url>
+	      <url>http://52.204.124.229:8081/repository/paypal-snapshots-repo/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
