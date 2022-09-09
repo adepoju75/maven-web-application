@@ -1,0 +1,36 @@
+node{
+ def mavenHome = tool name: 'maven3.8.6'
+ stage('1cloneCode'){
+    git "https://github.com/adeadejo/maven-web-application"
+    //git credentialsId: 'githubcredentials', url: 'https://github.com/rzzdevops/walmart'
+    //git "https://github.com/adeadejo/maven-web-application"
+    //sh "https://github.com/adeadejo/maven-web-application"
+    //bat "https://github.com/adeadejo/maven-web-application"
+ }
+ stage('2Test$Build'){
+    sh "${mavenHome}/bin/mvn install"
+ }
+ /*
+ stage('3CodeQuality'){
+    sh "${mavenHome}/bin/mvn sonar:sonar"
+ }
+ stage('4UploadArtifacts'){
+   sh "${mavenHome}/bin/mvn deploy"
+ }
+ stage('5deploy_uat'){
+   deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://107.22.128.62:8080/')], contextPath: null, war: 'target/*war'
+ }
+ stage('6deploy_prod'){
+     timeout(time:9, unit:'HOURS') {
+         input message: 'Application ready for deployment, Please review and approve'
+     }
+ }
+ stage('6deploy_prod'){
+   deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://107.22.128.62:8080/')], contextPath: null, war: 'target/*war'
+ }
+ stage('7Notification'){
+    emailext body: '''build status
+build status''', recipientProviders: [buildUser(), developers()], subject: 'build status', to: 'adejokeadepoju09@gmail.com'
+ }
+	*/
+}
